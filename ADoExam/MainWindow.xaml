@@ -1,0 +1,41 @@
+﻿<Window x:Class="ADoExam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADoExam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <DatePicker Height="25"   Margin="0 3 3 0" Name="datePicker1"
+             Width="115" />
+            <DatePicker Height="25"  Margin="0 3 3 0" Name="datePicker2"
+            Width="115" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Label Content="Choose start date" Height="25" Width="150"  Margin="0 0 3 0"></Label>
+            <Label Content="Choose end date" Height="25" Width="150"  Margin="0 0 3 0"></Label>
+        </StackPanel>
+
+        <Label Content="Pls enter your Email" Grid.Column="0" Grid.Row="1" Height="25" Width="150"  Margin="0 0 3 0"></Label>
+        <TextBox x:Name="txtName" Grid.Column="1" Grid.Row="1" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
+        <Label Content="Pls enter report path" Grid.Column="0" Grid.Row="2" Height="25" Width="150" Margin="0 5 0 0"  VerticalAlignment="Top" HorizontalAlignment="Center"></Label>
+        <TextBox x:Name="txtName2" Grid.Column="1" Grid.Row="2" Height="25" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="0 5 0 0"></TextBox>
+
+        <Button x:Name="btnGener" Grid.Column="1" Grid.Row="2" Content="Generate report" Width="150" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnGener_Click"></Button>
+    </Grid>
+</Window>
